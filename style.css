@@ -3,8 +3,12 @@
     --text-color: #3B58E5;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
-    width: 1280px;
+    width: 1000px;
     height: 100%;
     margin: auto;
     text-align: center;
@@ -17,7 +21,7 @@
     font-weight: 500;
     color: var(--text-color);
 
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 .bottomname-label {
@@ -32,7 +36,7 @@
 
 .mail-container {
     width: fit-content;
-    margin: 30px auto 20px;
+    margin: 40px auto 20px;
     border: var(--text-color) 1px solid;
     border-radius: 7px;
     display: flex;
@@ -64,4 +68,42 @@
 }
 .copy-button:hover .copy-button-filled {
     display: block;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+    margin-top: 130px;
+}
+
+.link-container {
+    width: 100%;
+    height: 100%;
+    border: var(--text-color) 1px solid;
+    color: var(--text-color);
+    border-radius: 8px;
+    display: flex;
+}
+
+.link-container:hover .link-text {
+    border-bottom: var(--text-color) 1px solid;    
+}
+
+.link-icon {
+    margin: auto 10px;
+    color: var(--text-color);
+}
+
+.link-text {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;    
+
+    margin: auto; 
+    margin-left: 10px;
+    padding: 5px 0;
 }
