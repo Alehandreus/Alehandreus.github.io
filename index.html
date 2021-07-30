@@ -16,23 +16,26 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="topname-label">
-      ALEHANDREUS
-    </div> 
-    <div class="bottomname-label">
-      ALEXANDER NIKOLAEV
-    </div>
-    <div class="mail-container">
-      <div id="mail-text" class="mail-text">
-        alehandro.nikolaev@gmail.com
+  <div class="outer-container">
+    <div class="container">
+      <div class="topname-label">
+        ALEHANDREUS
+      </div> 
+      <div class="bottomname-label">
+        ALEXANDER NIKOLAEV
       </div>
-      <div class="copy-button" onclick="copyToClipboard()">
-        <span class="iconify copy-button-regular" data-icon="fluent-copy-24-regular" data-inline="false" data-width="30" data-height="30"></span>
-        <span class="iconify copy-button-filled" data-icon="fluent-copy-24-filled" data-inline="false" data-width="30" data-height="30"></span>
+      <div class="mail-container">
+        <div id="mail-text" class="mail-text">
+          alehandro.nikolaev@gmail.com
+        </div>
+        <div class="copy-button" onclick="copyToClipboard()">
+          <span class="iconify copy-button-regular" data-icon="fluent-copy-24-regular" data-inline="false" data-width="30" data-height="30"></span>
+          <span class="iconify copy-button-filled" data-icon="fluent-copy-24-filled" data-inline="false" data-width="30" data-height="30"></span>
+        </div>  
+        <div id="copied-message" class="copied-message">Copied!</div>      
       </div>
+      <div id="links" class="links-container"></div>
     </div>
-    <div id="links" class="links-container"></div>
   </div>
 </body>
 </html>

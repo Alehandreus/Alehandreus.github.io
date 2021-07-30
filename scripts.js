@@ -8,6 +8,8 @@ function copyToClipboard() {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+
+    showCopied();
 };
 
 window.onload = function createLinks() {
@@ -20,18 +22,20 @@ window.onload = function createLinks() {
         ["simple-icons:vk", "ВКонтакте", "https://vk.com/id474339941"],
         ["simple-icons:steam", "Steam", "https://steamcommunity.com/profiles/76561198854382470/"],        
     ]
+    delay = 0;
     linksData.forEach(element => {
-        createLink(element[0], element[1], element[2]);
+        createLink(element[0], element[1], element[2], delay);
+        delay += 70;
     });
     
 }
 
-function createLink(iconData, linkName, linkUrl) {
+function createLink(iconData, linkName, linkUrl, delay) {
     linkContainer = $("<a>");
     linkContainer.addClass("link-container");
     linkContainer.attr("href", linkUrl);
     linkContainer.attr("target", "_blank");
-
+    linkContainer.css("opacity", "0"); 
 
     icon = $("<span>");
     icon.addClass("iconify link-icon");
@@ -48,4 +52,9 @@ function createLink(iconData, linkName, linkUrl) {
     linkContainer.append(linkText);
 
     $('#links').append(linkContainer);
+    linkContainer.delay(delay).animate({opacity: 1}, 300, "linear");
+}
+
+function showCopied() {
+    $('#copied-message').animate({opacity: 1}, 10).delay(2000).animate({opacity: 0}, 10);
 }
