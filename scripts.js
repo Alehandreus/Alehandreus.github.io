@@ -27,6 +27,7 @@ window.onload = function createLinks() {
         createLink(element[0], element[1], element[2], delay);
         delay += 70;
     });
+    $("body").fadeIn();
     
 }
 
@@ -57,4 +58,12 @@ function createLink(iconData, linkName, linkUrl, delay) {
 
 function showCopied() {
     $('#copied-message').animate({opacity: 1}, 10).delay(2000).animate({opacity: 0}, 10);
+}
+
+function changeTextColor() {
+    document.documentElement.style.setProperty('--text-color', $('#text-color-input').val());
+}
+
+function changeBgColor() {
+    document.documentElement.style.setProperty('--bg-color', $('#bg-color-input').val());
 }
